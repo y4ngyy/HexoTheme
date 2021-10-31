@@ -1,0 +1,81 @@
+// @import "navbar.scss";
+
+$backgroundColor: #eee;
+$large: 1024px;
+$medium: 768px;
+$largeWidth: 960px;
+$windowsFont : "Microsoft YaHei","微软雅黑","FangSong","仿宋",;
+$macFont: "Hiragino Sans GB", "冬青黑体","STFangsong", "华文仿宋",;
+$footerHeight: 30px;
+
+
+* {
+    font-family: "Lucida Console",Monaco, $windowsFont, $macFont, sans-serif;
+}
+
+body,html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background: $backgroundColor;
+    position: relative;
+    min-height: 100vh;
+    word-spacing: .2em;
+    line-height: 1.8em;
+    font-weight: normal;
+    font-style: normal;
+    //background: #eee;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#container {
+    flex:1;
+    padding: 8px 0 0;
+    margin: 0 auto;
+    width: $largeWidth;
+    @media screen and (max-width: $medium) {
+        width: 100%;
+    }
+    position: relative;
+    #main {
+        @media screen and (max-width: $medium) {
+            width: 100%;
+            float: none;
+        }
+        width: 75%;
+        float: right;
+    }
+    box-sizing: border-box;
+}
+#container::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+
+.arrow {
+  content: url("../img/arrow.png");
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+@import "navbar.scss";
+@import "github-gist.css";
+@import "archive.scss";
+@import "footer.scss";
+@import "aside.scss";
+@import "widget-personal.scss";
+@import "article.scss";

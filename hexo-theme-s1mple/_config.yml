@@ -1,0 +1,17 @@
+menu:
+  Home: /
+  Archives: /archives
+
+label: '/assets/label.png'
+avatar: '/assets/avatar.jpg'
+favicon: '/assets/favicon.ico'
+
+github: "https://github.com/y4ngyy"
+jianshu: "https://www.jianshu.com/u/bfe22c1bc5e0"
+juejin: ""
+cnblog: ""
+csdn: ""
+
+friends:
+  imagemlt: "https://hexo.imagemlt.xyz"
+  abc: ""

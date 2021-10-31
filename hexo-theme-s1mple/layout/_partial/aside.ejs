@@ -1,0 +1,36 @@
+<aside>
+    <div class="author">
+        <div class="avatar"><img src="<%= theme.avatar %>" alt="avatar"></div>
+        <div class="name"><%- config.author%></div>
+        <div class="description"><%- config.description%></div>
+    </div>
+    <div id="category">
+        <div class="aside-header">
+            <div>分类</div>
+        </div>
+        <%- list_categories(site.categories,{show_count:true}) %>
+    </div>
+    <% if(Object.keys(theme.friends).length > 0) { %>
+    <div id="friends">
+        <div class="aside-header">
+            <div>友情链接</div>
+        </div>
+        <div class="friend-box">
+            <ul>
+                <% for(var name in Object.keys(theme.friends)) { %>
+                    <% var key = Object.keys(theme.friends)[name] %>
+                    <li><a href="<%= theme.friends[key] %>"><%= key %></a></li>
+                <% } %>
+            </ul>
+        </div>
+    </div>
+    <% } %>
+    <% if (is_post()) { %>
+        <div id="toc-div">
+            <div class="aside-header">
+                <div>目录</div>
+            </div>
+            <%- toc(page.content) %>
+        </div>
+    <% } %>
+</aside>
